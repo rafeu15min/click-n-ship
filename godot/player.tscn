@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d3as3336dn2hr"]
+
+[ext_resource type="Texture2D" uid="uid://djwti7xy0q1gm" path="res://ship.svg" id="1_4flbx"]
+
+[node name="PlayerNode" type="Node2D" unique_id=1258741693]
+
+[node name="Player" type="Player" parent="." unique_id=499256816]
+position = Vector2(620, 319)
+motion_mode = 1
+
+[node name="PlayerSprite" type="Sprite2D" parent="Player" unique_id=57078434]
+texture = ExtResource("1_4flbx")
+
+[node name="PlayerCollider" type="CollisionPolygon2D" parent="Player" unique_id=1603113863]
+position = Vector2(-619, -319)
+polygon = PackedVector2Array(652, 319, 621, 335, 603, 352, 603, 344, 586, 352, 599, 326, 586, 319, 599, 312, 586, 286, 603, 295, 603, 286, 621, 303)
+
+[node name="Marker2D" type="Marker2D" parent="Player" unique_id=1856410797]
+position = Vector2(0, 5)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2074484727]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.7
+drag_top_margin = 0.7
+drag_right_margin = 0.7
+drag_bottom_margin = 0.7

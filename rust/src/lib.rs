@@ -1,5 +1,4 @@
 mod player;
-mod bullet;
 
 use godot::prelude::*;
 

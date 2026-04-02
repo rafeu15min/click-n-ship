@@ -4,5 +4,16 @@ compatibility_minimum = 4.1
 reloadable = true
 
 [libraries]
+; ---- Configuração para Windows ----
 windows.debug.x86_64 =   "res://../rust/target/debug/rust_project.dll"
 windows.release.x86_64 = "res://../rust/target/release/rust_project.dll"
+
+; ---- Configuração para Linux ----
+; Atenção à adição do prefixo 'lib' e extensão '.so' geradas nativamente pelo Cargo
+linux.debug.x86_64 =     "res://../rust/target/debug/librust_project.so"
+linux.release.x86_64 =   "res://../rust/target/release/librust_project.so"
+
+; ---- Configuração para macOS (Opcional, mas recomendado para Github) ----
+; macOS usa arquiteturas diferentes (x86_64 para Intel e arm64 para Apple Silicon)
+macos.debug =            "res://../rust/target/debug/librust_project.dylib"
+macos.release =          "res://../rust/target/release/librust_project.dylib"
